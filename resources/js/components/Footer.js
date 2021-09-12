@@ -23,8 +23,8 @@ class Footer extends Component{
 				          onClick={this.handleItemClick}
 				        />
 				        <Menu.Item
-				          name='sign in/ sign up'
-				          active={activeItem === 'sign in/ sign up'}
+				          name='sign in'
+				          active={activeItem === 'sign in'}
 				          onClick={this.handleItemClick}
 				        />
 

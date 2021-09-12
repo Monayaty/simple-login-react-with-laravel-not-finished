@@ -1,13 +1,43 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import { fab } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF, faGoogle, faLinkedin  } from '@fortawesome/free-brands-svg-icons'
+import { Link, NavLink } from "react-router-dom";
+import axios from 'axios';
 
 class Signin extends Component {
     state = {
         signin: true,
     };
+    
     render() {
+        const[errors,setErrors] = useState('');
+        const [user, setUser] = useState({
+            name: "",
+            email: "",
+            password:""
+        });
+        
+        const [msg,setMsg] = useState('');
+ 
+        const [username, setUsername] = useState("");
+        const [pass, setPass] = useState("");
+    
+        const [user, setUser] = useState({
+            email: "",
+            password:""
+        });
+    
+        let history = useHistory(); 
+    
+        const {email,password} = user;
+        const onInputChange = e => {
+            setUser({ ...user, [e.target.name]: e.target.value });
+        };
+        const {name, email,password} = user;
+        const onInputChange = e => {
+            setUser({ ...user, [e.target.name]: e.target.value });
+        };
         const { signin = true } = this.state;
         return (
             <div className="zama-form">
@@ -63,7 +93,7 @@ class Signin extends Component {
                             <input type="email" placeholder="Email" />
                             <input type="password" placeholder="Password" />
                             <a href="#">Forgot your password?</a>
-                            <button 
+                            <button
                             // onClick={() =? {
                             //     props.history.push("/home");
                             // }}

@@ -7282,8 +7282,8 @@ var Footer = /*#__PURE__*/function (_Component) {
               active: activeItem === 'contact us',
               onClick: this.handleItemClick
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(semantic_ui_react__WEBPACK_IMPORTED_MODULE_3__["default"].Item, {
-              name: "sign in/ sign up",
-              active: activeItem === 'sign in/ sign up',
+              name: "sign in",
+              active: activeItem === 'sign in',
               onClick: this.handleItemClick
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(semantic_ui_react__WEBPACK_IMPORTED_MODULE_3__["default"].Menu, {
               position: "right",
@@ -7407,8 +7407,8 @@ var Header = /*#__PURE__*/function (_Component) {
               active: activeItem === 'contact us',
               onClick: this.handleItemClick
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(semantic_ui_react__WEBPACK_IMPORTED_MODULE_4__["default"].Item, {
-              name: "sign in/ sign up",
-              active: activeItem === 'sign in/ sign up',
+              name: "sign in",
+              active: activeItem === 'sign in',
               onClick: this.handleItemClick
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(semantic_ui_react__WEBPACK_IMPORTED_MODULE_4__["default"].Menu, {
               position: "right",
@@ -7470,11 +7470,11 @@ function Index() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Switch, {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
         exact: true,
-        path: "/",
+        path: "login",
         component: _Signin__WEBPACK_IMPORTED_MODULE_4__["default"]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(ProtectedRoute, {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Route, {
         exact: true,
-        path: "home",
+        path: "/",
         component: _Slider__WEBPACK_IMPORTED_MODULE_2__["default"]
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Footer__WEBPACK_IMPORTED_MODULE_3__["default"], {})]

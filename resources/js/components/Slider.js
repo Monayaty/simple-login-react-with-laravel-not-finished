@@ -1,7 +1,7 @@
 // import React, { useCallback, useState } from 'react';
 // import SliderView from 'semantic-ui-react-slider';
 import React, { Component } from 'react';
-
+import { userHistory, useParams } from "react-router-dom";
 const slideWidth = 30;
 
 const _items = [
@@ -95,7 +95,13 @@ const Carousel = () => {
     const [isTicking, setIsTicking] = React.useState(false);
     const [activeIdx, setActiveIdx] = React.useState(0);
     const bigLength = items.length;
-
+    const {users} = useParams();
+    let history = useHistory();
+    const usersss = localStorage.getItem('users');
+    const logout= () => {
+        localStorage.removeItem("users")
+        history.push("/");
+    }
     const prevClick = (jump = 1) => {
         if (!isTicking) {
             setIsTicking(true);

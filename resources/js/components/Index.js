@@ -12,8 +12,8 @@ function Index() {
         <div>
             <Header />
             <Switch>
-                <Route exact path="/" component={ Signin }/>
-                <ProtectedRoute exact path="home" component={ Carousel } />
+                <Route exact path="login" component={ Signin } />
+                <Route exact path="/" component={ Carousel } />
             </Switch>
             <Footer />
         </div>

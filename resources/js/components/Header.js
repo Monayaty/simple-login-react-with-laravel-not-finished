@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { Segment, Image, Input, Menu } from 'semantic-ui-react';
+import { useHistory, useParams } from "react-router-dom";
 
 class Header extends Component{
 	state = { activeItem: 'home' }
  	handleItemClick = ({ name }) => this.setState({ activeItem: name })
-
+    
 	render(){
 		const { activeItem } = this.state
-
+        const {users} = useParams();
+        let history = useHistory();
+        const usersss = localStorage.getItem('users');
+        const logout= () => {
+            localStorage.removeItem("users")
+            history.push("/");
+        }
 		return(
 			<div>
 				<div>
@@ -31,8 +38,8 @@ class Header extends Component{
 				          onClick={this.handleItemClick}
 				        />
 				        <Menu.Item
-				          name='sign in/ sign up'
-				          active={activeItem === 'sign in/ sign up'}
+				          name='sign in'
+				          active={activeItem === 'sign in'}
 				          onClick={this.handleItemClick}
 				        />
 
@@ -43,7 +50,7 @@ class Header extends Component{
 				         <Menu.Item
 				            name='logout'
 				            active={activeItem === 'logout'}
-				            onClick={this.handleItemClick}
+				            onClick={this.logout}
 				        />
 				        </Menu.Menu>
 				    </Menu>

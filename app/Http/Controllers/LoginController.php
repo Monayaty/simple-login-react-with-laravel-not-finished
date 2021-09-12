@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+    public function LoginForm()
+    {
+        return view('welcome');
+    }
     public function Login(Request $request)
     {
         $request -> validate([
@@ -21,6 +25,7 @@ class LoginController extends Controller
         if(Hash::check($request->password, $user->password) === false){
             return redirect()->route('login')->with(['error'=>'password is wrong']) ;
         }
-        return redirect()->route('home');
+        // return redirect()->route('home');
+        dd("hi");
     }
 }

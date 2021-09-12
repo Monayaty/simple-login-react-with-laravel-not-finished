@@ -18,5 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::post('login', [LoginController::class, 'Login'])->name('login');
-Route::get('home', [HomeController::class, 'Home'])->name('home');
+//Route::get('login', [LoginController::class, 'LoginForm'])->name('LoginForm');
+//Route::post('loginn', [LoginController::class, 'Login'])->name('login');
+
+Route::get('/', [HomeController::class, 'Home'])->name('home');
